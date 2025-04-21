@@ -31,10 +31,30 @@ def findFactorial(num):
     for i in range(1, num + 1):
         # print('result --> ',result, 'i --> ', i, 'num --> ', num)
         result = result * i
-    print(num,'! = ', result)
+    # print(num,'! = ', result)
     return result
 
 findFactorial(10)
 findFactorial(3)
 findFactorial(4)
 
+#4 Fibonacci sequence in Stocks finance
+
+def fibonacci_retracement(high, low):
+    diff = high - low
+    levels = {
+        '0.0%': high,
+        '23.6%': high - diff * 0.236,
+        '38.2%': high - diff * 0.382,
+        '50.0%': high - diff * 0.5,
+        '61.8%': high - diff * 0.618,
+        '78.6%': high - diff * 0.786,
+        '100.0%': low
+    }
+    return levels
+
+retracement_levels = fibonacci_retracement(227.10, 235.30)
+
+#Printing levels
+for level, price in retracement_levels.items():
+    print(f"{level}: Inr {price:.2f}")
