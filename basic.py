@@ -56,5 +56,35 @@ def fibonacci_retracement(high, low):
 retracement_levels = fibonacci_retracement(227.10, 235.30)
 
 #Printing levels
-for level, price in retracement_levels.items():
-    print(f"{level}: Inr {price:.2f}")
+# for level, price in retracement_levels.items():
+    # print(f"{level}: Inr {price:.2f}")
+
+
+#5 Count vowels in a string
+def count_vowels(string):
+    vowels = "aeiouAEIOU"
+    count = []
+
+    for char in string:
+        if char in vowels:
+            count.append(char)
+    # print("Vowels Count --> ", len(count))
+    return len(count)
+
+count_vowels("Vishakha")
+
+#6 Check Palindrome 
+def check_palindrome(org_str):
+    value = str(org_str).lower()
+    reversed_value = value[::-1]
+    if value == reversed_value:
+        print(value, 'Palindrome')
+        return 'Palindrome'
+    else:
+        print(value, 'Not a Palindrome')
+        return 'Not a Palindrome'
+    
+check_palindrome("vishakha")
+check_palindrome("Madam")
+check_palindrome(10101)
+
