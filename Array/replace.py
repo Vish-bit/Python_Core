@@ -1,3 +1,5 @@
+# Ques - Replace each even number in an array  with two of the same number.
+
 arr = [1,2,5,6,8,0,12]
 i = 0
 
